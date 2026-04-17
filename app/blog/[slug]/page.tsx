@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/landing/SiteHeader";
 import { SiteFooter } from "@/components/landing/SiteFooter";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import {
-  DownloadButton,
+  AppStoreBadge,
   StartCleaningButton,
 } from "@/components/CTAButtons";
 import { blogPosts, getPostBySlug } from "../posts";
@@ -95,7 +95,7 @@ export default async function BlogPostPage({
               </p>
               <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <StartCleaningButton location="blog_post" />
-                <DownloadButton location="blog_post" label="Download App" />
+                <AppStoreBadge location="blog_post" />
               </div>
             </div>
           </section>

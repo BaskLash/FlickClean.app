@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import {
-  DownloadButton,
+  AppStoreBadge,
   StartCleaningButton,
 } from "@/components/CTAButtons";
 
@@ -37,7 +37,7 @@ export function CTA() {
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
               <StartCleaningButton location="cta_section" />
-              <DownloadButton location="cta_section" label="Download App" />
+              <AppStoreBadge location="cta_section" size="lg" />
             </div>
           </div>
         </motion.div>

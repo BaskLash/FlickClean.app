@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import {
-  DownloadButton,
+  AppStoreBadge,
   StartCleaningButton,
 } from "@/components/CTAButtons";
 
@@ -101,7 +101,7 @@ export function Hero() {
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3"
         >
           <StartCleaningButton location="hero" />
-          <DownloadButton location="hero" />
+          <AppStoreBadge location="hero" />
         </motion.div>
 
         <motion.div
@@ -110,7 +110,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.8 }}
           className="mt-10 text-xs uppercase tracking-[0.18em] text-white/30"
         >
-          Nothing is deleted instantly · You always review first
+          Available on iPhone · Nothing is deleted instantly
         </motion.div>
       </div>
     </section>
