@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
+import Image from 'next/image'
 
 export function SiteFooter() {
   return (
@@ -7,7 +8,13 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 sm:flex-row">
         <div className="flex items-center gap-2 text-white/70">
           <span className="flex size-7 items-center justify-center rounded-lg bg-white text-black">
-            <Sparkles className="size-3.5" />
+             <Image 
+                src="/icon512x512.jpg" 
+                alt="Description"
+                width={45} // equivalent to size-4
+                height={45}
+                className="object-contain"
+              />
           </span>
           <span className="text-sm font-medium">FlickClean</span>
         </div>

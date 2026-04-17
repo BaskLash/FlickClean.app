@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { APP_STORE_URL } from "@/components/AppStoreBadge";
 import { trackEvent } from "@/lib/analytics";
+import Image from 'next/image'
 
 function NavAppleLogo() {
   return (
@@ -30,7 +31,13 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2 group">
           <span className="flex size-8 items-center justify-center rounded-xl bg-white text-black">
-            <Sparkles className="size-4" />
+            <Image 
+    src="/icon512x512.jpg" 
+    alt="Description"
+    width={45} // equivalent to size-4
+    height={45}
+    className="object-contain"
+  />
           </span>
           <span className="text-base font-semibold tracking-tight">
             FlickClean
