@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { ScrollDepthTracker } from "@/components/analytics/ScrollDepthTracker";
 
@@ -72,6 +73,7 @@ export default function RootLayout({
         {children}
         <ScrollDepthTracker />
         {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
+        <Analytics />
       </body>
     </html>
   );
