@@ -9,6 +9,233 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "2026-04-17-adding-left-handed-swipe-support-flutter-photo-app",
+    title: "How We Added Left-Handed Swipe Support to Our Photo App",
+    description: "One left-handed user showed us why fixed swipe directions create unnecessary friction. Here's how we made swipe controls fully customizable — simply and intuitively.",
+    date: "2026-04-17",
+    readingMinutes: 5,
+    content: `As a senior Flutter engineer focused on photo and video management apps, I’ve learned that even the smallest interaction details can make or break the user experience.
+
+Recently, a real user test revealed a clear accessibility gap in our swipe-based photo cleaner.
+
+### The Problem
+
+Our app uses a simple, fast swipe gesture:
+
+- **Swipe right** → Keep the photo  
+- **Swipe left** → Delete the photo
+
+This works perfectly for most right-handed users. But for left-handed people, it felt completely backwards and unnatural.
+
+One left-handed tester told us: “I instinctively want to swipe right to delete and left to keep — the current setup fights my natural hand movement.”
+
+Fixed swipe directions were creating unnecessary friction for a significant portion of users.
+
+### The Solution: Customizable Swipe Directions
+
+We decided to give users full control with a simple, accessible setting.
+
+Users can now choose exactly what happens on each swipe:
+
+- Swipe right: Keep or Delete  
+- Swipe left: Keep or Delete
+
+This makes the app feel natural for both right-handed and left-handed users.
+
+### Keeping It Extremely Simple
+
+We knew the setting had to be **non-technical** and usable by anyone — including elderly users who might not be familiar with complex menus.
+
+Instead of burying it deep in settings, we made it:
+
+- Easy to find
+- Instant to understand
+- Quick to change
+
+The final implementation uses two clear selectors:
+
+**Swipe right does:** [Keep / Delete]  
+**Swipe left does:** [Keep / Delete]
+
+Changes apply **immediately** with real-time feedback. As soon as you adjust the setting, the next photo you swipe behaves exactly as you chose.
+
+We also added subtle visual hints (icons and short labels) during the swipe gesture so users always know what action they’re performing.
+
+### Why Not Just a “Left-Handed Mode” Toggle?
+
+A simple toggle was considered, but the two-selector approach gives maximum flexibility while still remaining very easy to use. Most users will either keep the default or flip both directions — but the interface supports every possible combination.
+
+### Implementation Highlights
+
+From a technical perspective, we:
+
+- Integrated the new preference into the existing swipe gesture system without breaking current behavior
+- Stored the user choice persistently using local storage
+- Kept the core logic clean and maintainable
+- Ensured smooth performance across all devices
+
+The default remains **Right → Keep, Left → Delete** so existing users notice no change unless they adjust the setting.
+
+### The Result
+
+This small but thoughtful feature significantly improves accessibility and comfort:
+
+- Left-handed users now feel the app was built for them
+- Reduced physical and cognitive friction
+- Higher overall satisfaction with the core interaction
+- A more inclusive experience for everyone
+
+### Key Takeaway
+
+Great UX isn’t just about making things fast — it’s about making them feel **natural** to each individual user.
+
+Sometimes the best features are the ones that quietly remove friction you didn’t even realize was there.
+
+---
+
+Tired of fighting your own instincts while cleaning your photo gallery?  
+
+Try Photo Swiper now — with fully customizable swipe directions that adapt to **your** hand preference. Clean faster, more comfortably, and exactly the way you want.`,
+  },
+    {
+    slug: "2026-04-16-fixing-ios-photo-permission-onboarding-ux",
+    title: "How We Fixed a Critical iOS Photo Permission Onboarding UX Flaw",
+    description: "The subtle permission flow mistake that was quietly killing our activation rates — and the simple fix that dramatically improved user experience.",
+    date: "2026-04-16",
+    readingMinutes: 6,
+    content: `First impressions matter — especially in mobile apps. A single confusing step during onboarding can quietly sabotage your entire user activation.
+
+While refining the onboarding flow for our photo organization app, we discovered a subtle but critical UX flaw in how we handled iOS photo library permissions. What seemed like a standard step was actually creating unnecessary friction and causing users to drop off.
+
+Here’s exactly what went wrong — and how we fixed it for a much smoother experience.
+
+## The Original (Flawed) Experience
+
+During onboarding, we clearly explained the value:
+
+“Photo Swiper uses your photo library to help you review and clean up your photos. Your media never leaves your device.”
+
+So far, so good.
+
+But the moment users tapped “Continue,” things fell apart.
+
+Instead of a simple permission dialog, users were instantly redirected to the iOS Settings app — with **zero guidance** on what to do next.
+
+They were dropped into the Settings maze without a map.
+
+## What Users Actually Experienced
+
+Real user testing revealed a frustrating loop:
+
+1. User taps “Continue”
+2. Gets redirected to Settings
+3. Feels confused and quickly returns to the app
+4. Sees the same onboarding screen again
+5. Taps “Continue” once more…
+
+Result? A dead-end cycle of confusion with no progress.
+
+## The Surprising Insight
+
+Interestingly, users who tapped “Not now” had a completely different — and far better — experience.
+
+They entered the app normally, and shortly after, the **native iOS permission dialog** appeared:
+
+“Allow access to photos?”
+
+With one tap on “Allow Full Access,” everything worked perfectly.
+
+This revealed the core problem:
+
+**We were forcing users into Settings too early** instead of letting iOS handle the permission request naturally.
+
+## Why This Was Such a Big Problem
+
+By bypassing the native permission flow, we violated fundamental iOS UX expectations.
+
+The native iOS permission popup is:
+
+\- Familiar to every iPhone user
+\- Clear and contextual
+\- Trusted and secure-feeling
+\- Designed by Apple to reduce friction
+
+Our custom approach created the opposite:
+
+\- Confusion and uncertainty
+\- Cognitive overload at the worst possible moment
+\- Poor first impression
+\- Unnecessary drop-offs
+
+## The Fix: Let iOS Do Its Job
+
+We redesigned the entire flow around one simple principle:
+
+**Don’t fight the system. Use it.**
+
+### New Behavior
+
+When the user taps “Continue”:
+
+\- The app now directly triggers the native iOS permission request
+\- The familiar system dialog appears immediately
+\- Users can choose **Allow**, **Limited**, or **Don’t Allow**
+
+### Smart Handling for Every Outcome
+
+\- **Full Access** → User enters the app with their photos ready to review
+\- **Limited Access** → The app adapts gracefully with a clear explanation
+\- **Denied** → User receives a friendly message with next steps
+
+### Settings as a True Fallback
+
+We only direct users to Settings in rare edge cases (e.g., when permission was permanently denied previously). Even then, we provide a clear, human explanation and a single “Open Settings” button.
+
+Settings is now the exception — never the default path.
+
+## Eliminating the Frustration Loop
+
+The biggest improvement:
+
+\- No more bouncing between the app and Settings
+\- No repeated onboarding screens
+\- No dead ends or confusion
+
+The flow now feels natural, predictable, and respectful of how iOS is designed to work.
+
+## Technical Implementation Highlights
+
+To ensure this worked reliably across all devices (including older models like iPhone X), we:
+
+\- Used robust Flutter permission packages (\`photo_manager\` and \`permission_handler\`)
+\- Triggered permission requests programmatically at the right moment
+\- Built clear state management for first-time requests, temporary denials, and permanent denials
+\- Avoided any unnecessary redirects to Settings
+
+## The Results
+
+This seemingly small change delivered outsized improvements:
+
+\- ✅ Significantly reduced user confusion
+\- ✅ Smoother and faster onboarding
+\- ✅ Higher activation and completion rates
+\- ✅ Much better first impression of the app
+
+## Key Takeaway for Mobile Developers
+
+When designing onboarding flows for iOS:
+
+**Always default to native patterns before building custom flows.**
+
+Users already understand how their iPhone works. Your job is to align with their mental model — not challenge it.
+
+Respecting platform conventions isn’t lazy design. It’s smart, user-centered design.
+
+---
+
+Ready to experience a frustration-free way to clean and organize your photo library? Try Photo Swiper today and see how effortless it feels when everything just works.`,
+  },
+  {
     slug: "clean-phone-gallery-without-losing-important-photos",
     title: "How to Clean Your Phone Gallery Without Losing Important Photos",
     description:
