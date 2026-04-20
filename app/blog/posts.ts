@@ -9,6 +9,84 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "2026-04-20-fixing-image-cropping-in-flutter-swipe-review",
+    title: "How We Fixed Image Cropping in Our Full-Screen Photo Swipe Review",
+    description: "When photos appeared cropped and cut off during swiping, the experience felt wrong. Here's how we made every image look exactly as it was originally taken — naturally and completely visible.",
+    date: "2026-04-20",
+    readingMinutes: 5,
+    content: `As a senior Flutter engineer obsessed with pixel-perfect image rendering, I know how important visual trust is in photo apps.
+
+Even a small rendering issue can break the user’s confidence in what they’re seeing.
+
+### The Problem
+
+In our swipe-based photo review interface, users select a month and then swipe through their photos in full-screen mode.
+
+Everything worked smoothly from a performance perspective, but there was one visual flaw that kept surfacing:
+
+**Images were being cropped.**
+
+Instead of showing the complete photo, parts were cut off at the edges. The image often looked “zoomed in” or incorrectly framed compared to the original. Users could recognize the photo, but it didn’t feel right — important details were missing.
+
+One user clearly described it:  
+“I know this photo, but it looks cut off. It doesn’t show the full picture like it should.”
+
+This created a subtle but noticeable disconnect and reduced trust in the review experience.
+
+### Why It Was Happening
+
+We were using "BoxFit.cover", which forces the image to fill the entire screen. While this looks dramatic, it inevitably crops images that don’t perfectly match the screen’s aspect ratio.
+
+For a photo review tool where accuracy matters, cropping was the wrong choice.
+
+### The Fix: Show the Complete Image
+
+We switched to a rendering approach that prioritizes **visual integrity** over filling every pixel.
+
+The solution was straightforward but powerful:
+
+- Changed from "BoxFit.cover" to "BoxFit.contain"
+- Ensured the entire image is always visible
+- Maintained the original aspect ratio at all times
+- Scaled the image down when necessary so nothing gets cut off
+
+### Additional Polish
+
+To make the experience feel premium and balanced, we also:
+
+- Centered the image perfectly within the available space
+- Made sure no UI elements (like swipe hints or action buttons) overlap important parts of the photo
+- Added subtle dynamic scaling that adapts cleanly to both portrait and landscape images
+- Kept the layout clean so the focus stays on the photo itself
+
+The result? Every photo now appears **exactly** as it was taken — fully visible, naturally proportioned, and true to the original.
+
+### The Impact
+
+This small change delivered a noticeably better experience:
+
+- ✅ No more cropped or “cut off” photos
+- ✅ Users see the complete image every time
+- ✅ The swipe review feels more accurate and trustworthy
+- ✅ Overall visual clarity and polish improved significantly
+
+Users no longer have to wonder if something important is missing from the preview.
+
+### Key Takeaway
+
+In photo management apps, **how** you display images is just as important as **what** you let users do with them.
+
+Prioritizing "BoxFit.contain" over "BoxFit.cover" in review modes might seem like a tiny technical detail — but it makes a huge difference in perceived quality and user confidence.
+
+Never sacrifice content for aesthetics when accuracy matters most.
+
+---
+
+Want to see your photos exactly as you captured them — fully visible and beautifully presented while you quickly clean and organize?
+
+Try Photo Swiper today and enjoy a swipe experience that finally feels right.`,
+  },
+  {
     slug: "2026-04-17-adding-left-handed-swipe-support-flutter-photo-app",
     title: "How We Added Left-Handed Swipe Support to Our Photo App",
     description: "One left-handed user showed us why fixed swipe directions create unnecessary friction. Here's how we made swipe controls fully customizable — simply and intuitively.",
