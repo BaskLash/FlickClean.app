@@ -9,6 +9,82 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "2026-04-21-adding-pinch-to-zoom-flutter-photo-swipe-view",
+    title: "How We Added Natural Pinch-to-Zoom to Our Photo Swipe Interface",
+    description: "When even non-technical users instinctively tried to pinch-zoom on photos, we knew it was time to add proper gesture-based zoom. Here's how we made it feel perfectly native.",
+    date: "2026-04-21",
+    readingMinutes: 5,
+    content: `As a senior Flutter engineer building intuitive photo apps, I pay close attention to natural user behavior — especially when it reveals missing features.
+
+During testing with an elderly family member (my grandfather), something became crystal clear:
+
+He kept trying to pinch-zoom into photos while swiping through them.
+
+Even though he never said “I wish I could zoom,” his fingers did. Repeatedly. That natural instinct told us everything we needed to know — pinch-to-zoom wasn’t just nice to have. It was expected.
+
+### The Problem
+
+Our swipe-based review interface let users quickly go through photos month by month, but there was **no zoom functionality** at all.
+
+Users couldn’t inspect details, read small text, or take a closer look at anything. For a photo organization tool, this was a noticeable gap in the experience.
+
+Worse, it conflicted with how people naturally interact with photos on their iPhone — they expect to be able to pinch and explore.
+
+### The Solution: True Gesture-Based Zoom
+
+We implemented a smooth, native-feeling **pinch-to-zoom** experience directly inside the swipe view.
+
+Key features we added:
+
+- **Pinch-to-zoom** using natural two-finger gestures (zoom in and out)
+- **Panning** — freely move the image around when zoomed in
+- **Smart gesture coordination** between swiping and zooming
+
+### How Gestures Work Together
+
+We made sure the interactions feel intelligent and frustration-free:
+
+- When the image is **zoomed out** (normal view): Horizontal swipe moves to the next/previous photo — exactly as before.
+- When the image is **zoomed in**: Swipe gestures are disabled for navigation, so you can pan freely without accidentally jumping to another photo.
+- Once you pinch back to the original scale, normal swipe navigation returns automatically.
+
+This behavior closely mirrors Apple’s own Photos app, making it instantly familiar to users.
+
+### Technical Implementation
+
+We chose Flutter’s \`InteractiveViewer\` as the foundation because it provides excellent performance and handles scale, pan, and gesture conflicts elegantly.
+
+The implementation stayed clean:
+- No performance impact on the core swipe flow
+- Smooth animations and responsive feel
+- Proper state management to toggle navigation based on current zoom level
+
+We deliberately avoided any tap-to-zoom fallback. The goal was to respect natural gesture behavior, not introduce artificial alternatives.
+
+### The Result
+
+The change transformed the review experience:
+
+- ✅ Users can now naturally inspect any detail in their photos
+- ✅ Pinch-to-zoom feels smooth and native
+- ✅ No more accidental navigation while zoomed
+- ✅ Significantly better usability, especially for older or detail-oriented users
+
+What started as an observation during family testing became one of those “why didn’t we have this sooner” features.
+
+### Key Takeaway
+
+Never ignore what users *do* with their fingers, even if they don’t verbalize the request.
+
+Real user behavior is the best specification. When someone instinctively reaches for a gesture that doesn’t exist yet, it’s a clear signal to build it — and to build it right.
+
+---
+
+Want to quickly swipe through your photos **and** zoom in naturally whenever you need a closer look?
+
+Try Photo Swiper today and enjoy a photo review experience that finally feels complete and intuitive.`,
+  },
+  {
     slug: "2026-04-20-fixing-image-cropping-in-flutter-swipe-review",
     title: "How We Fixed Image Cropping in Our Full-Screen Photo Swipe Review",
     description: "When photos appeared cropped and cut off during swiping, the experience felt wrong. Here's how we made every image look exactly as it was originally taken — naturally and completely visible.",
