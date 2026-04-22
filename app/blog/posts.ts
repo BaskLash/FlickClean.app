@@ -8,6 +8,56 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+    {
+    slug: "2026-04-22-faster-app-sharing-settings-improvement",
+    title: "Faster App Sharing and Improved Settings for a Better User Experience",
+    description:
+      "We continuously improve our app by analyzing competitors and user behavior. Discover how our latest update makes sharing and settings easier than ever.",
+    date: "2026-04-22",
+    readingMinutes: 4,
+    content: `Improving a product is never a one-time task — it’s an ongoing process. We constantly monitor the market and our competitors to ensure our app delivers the best possible experience for our users.
+
+This approach doesn’t just help us stay competitive — it directly improves the quality of our core product.
+
+## Learning from the competition
+
+Recently, we noticed something interesting: one of our competitors had placed an important feature — app sharing — inside their general settings section.
+
+At first glance, this might seem like a small detail. But in practice, it affects how quickly users can share the app and how easily they can discover important features.
+
+## Were we doing this before?
+
+The honest answer is: no, we weren’t.
+
+At that point, our app did not yet include a streamlined way to share directly from a central place in the settings. It was a missing piece in the overall user experience — and something we immediately recognized as an opportunity for improvement.
+
+## Acting fast on user experience improvements
+
+Once we identified the gap, we didn’t wait.
+
+We integrated the feature directly into our settings, making it easier and faster for users to share the app with others. At the same time, we refined the settings layout to include additional options that influence the overall user experience.
+
+Now, everything is in one place — clear, accessible, and intuitive.
+
+## What changed for you as a user
+
+With this update, you can now:
+
+- Share the app with others in just a few taps
+- Access improved settings in a more structured layout
+- Adjust preferences that directly impact your experience
+- Navigate key features without unnecessary searching
+
+## Why this matters
+
+Small UX improvements often have the biggest impact. When users don’t have to think about where to find something, they simply enjoy using the product more.
+
+That’s exactly what we aim for: fewer obstacles, more clarity, and a smoother experience overall.
+
+---
+
+We’ll continue refining and improving our app based on real-world usage and feedback. If you haven’t tried the latest version yet, now is a great time to explore the new improvements and see the difference for yourself.`,
+  },
   {
     slug: "2026-04-21-adding-pinch-to-zoom-flutter-photo-swipe-view",
     title: "How We Added Natural Pinch-to-Zoom to Our Photo Swipe Interface",
