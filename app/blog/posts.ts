@@ -9,6 +9,249 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
     {
+    slug: "2026-04-25-clear-swipe-guidance-better-ux",
+    title: "Clear Swipe Guidance: Making Interactions Instantly Understandable",
+    description:
+      "Even simple gestures can feel confusing without guidance. Learn how subtle swipe indicators can improve clarity, usability, and overall user experience.",
+    date: "2026-04-25",
+    readingMinutes: 5,
+    content: `Swipe gestures feel natural — but only when they’re clearly understood.
+
+What seems intuitive to one user can be unclear to another. And when that happens, even the best-designed apps can feel confusing.
+
+## When “simple” isn’t actually simple
+
+We recently had a valuable conversation about how users interact with our app’s core feature: swiping through photos and videos.
+
+The feedback was straightforward:
+
+While swiping works well once you understand it, the direction and meaning behind each swipe isn’t always immediately clear — especially for new users.
+
+And that’s a problem.
+
+## Why clarity matters in gesture-based apps
+
+Gestures remove buttons, reduce clutter, and create a smooth experience. But they also come with a trade-off:
+
+They’re invisible.
+
+Without clear signals, users are left guessing:
+
+- Should I swipe left or right?
+- What happens if I swipe in this direction?
+- Did I just do the right action?
+
+Even a moment of hesitation can break the flow.
+
+## The solution: subtle, smart guidance
+
+The goal isn’t to overload the interface with instructions.
+
+It’s to provide **just enough guidance** — at the right moment.
+
+Here’s what an improved experience can look like:
+
+- Small directional hints during swiping
+- Minimal icons or labels near the edges of the screen
+- Soft animations that suggest movement
+- Context-aware guidance that appears only when needed
+
+Think of it as a quiet assistant — always there, but never in the way.
+
+## Adapting to the user
+
+One powerful idea is to make this guidance adaptive.
+
+For example:
+
+- Left-handed users might see mirrored swipe hints
+- Right-handed users get a layout optimized for their natural motion
+- The interface subtly adjusts without requiring manual effort
+
+This kind of personalization makes the app feel more intuitive from the very first interaction.
+
+## Keeping the experience clean
+
+The biggest challenge is balance.
+
+Too much guidance becomes distracting. Too little creates confusion.
+
+The best solutions are:
+
+- Minimal
+- Contextual
+- Easy to ignore once learned
+
+Over time, users won’t even notice the hints anymore — they’ll simply feel that the app “just works.”
+
+## Why this small detail has a big impact
+
+Improving swipe clarity doesn’t just help new users.
+
+It:
+
+- Reduces hesitation
+- Speeds up decision-making
+- Makes the app feel more polished
+- Builds confidence in every interaction
+
+And that’s what great user experience is all about.
+
+---
+
+We’re continuously refining every detail to make the app as intuitive and effortless as possible. If you want a smoother, more guided way to organize your photos and videos, try the latest version and feel the difference yourself.`,
+  },
+    {
+    slug: "2026-04-24-video-preview-better-selection-experience",
+    title: "Why Video Previews Make Choosing the Right Moments So Much Easier",
+    description:
+      "Static thumbnails aren’t enough. Discover how video previews improve decision-making and create a smoother, more intuitive gallery experience.",
+    date: "2026-04-24",
+    readingMinutes: 5,
+    content: `When you're sorting through your photos and videos, speed and clarity matter.
+
+A single glance should be enough to decide: keep or remove.
+
+But what happens when that’s not possible?
+
+## The hidden problem with video thumbnails
+
+Unlike photos, videos often look identical at first glance.
+
+You might have recorded the same moment twice — maybe with slightly different angles, timing, or quality. But when you’re swiping through your gallery, both videos show the exact same thumbnail.
+
+And that creates a problem:
+
+You can’t tell which one is better without opening them individually.
+
+## Why this slows everything down
+
+Having to tap into each video breaks your flow completely:
+
+- You lose your rhythm while sorting
+- Decisions take longer than they should
+- The entire experience feels more tedious
+
+Instead of quick, intuitive swiping, you’re forced into constant interruptions.
+
+## The smarter approach: video previews
+
+A better solution is simple: **show what’s inside the video while swiping.**
+
+This could be:
+
+- A short preview clip
+- A quick auto-play snippet
+- Or even the full video playback on focus
+
+The exact implementation can vary — but the goal is always the same:
+
+Give users immediate insight without extra steps.
+
+## Why previews make such a big difference
+
+With video previews, everything becomes easier:
+
+- You instantly recognize what the video contains
+- You can compare similar clips without opening each one
+- Decisions become faster and more confident
+- The swipe experience stays smooth and uninterrupted
+
+Instead of guessing, you *know* what you’re looking at.
+
+## Learning from real usage (and the competition)
+
+This isn’t just theory — it’s something we’ve observed in real user feedback and in other apps on the market.
+
+When users can preview videos directly while browsing, their entire workflow improves. It feels more modern, more responsive, and far less frustrating.
+
+## What we’re focusing on next
+
+We’re currently exploring the best way to integrate video previews into our app.
+
+Whether it’s a short animated preview or a full playback experience, one thing is clear:
+
+A static thumbnail is no longer enough.
+
+---
+
+We’re continuously refining the experience to make organizing your gallery faster, smoother, and more intuitive. If you want a smarter way to review your photos and videos, try our app and experience the difference for yourself.`,
+  },
+    {
+    slug: "2026-04-23-skip-intro-better-user-experience",
+    title: "Why Skipping the Intro Screen Improves the Entire App Experience",
+    description:
+      "First impressions matter—but forcing users to repeat them doesn’t. Learn how removing friction after onboarding creates a smoother, more enjoyable app experience.",
+    date: "2026-04-23",
+    readingMinutes: 5,
+    content: `A great onboarding experience is essential. It helps users understand what your app does, how it works, and why it matters.
+
+But here’s the catch: onboarding should happen **once** — not every time someone opens your app.
+
+## The problem with repeated intro screens
+
+We recently received a simple but powerful piece of feedback:
+
+Every time the app was closed and reopened, the intro screen appeared again — requiring users to swipe through multiple slides before reaching the actual app.
+
+While this might seem like a small inconvenience, it quickly becomes frustrating in everyday use.
+
+Users don’t want to *re-learn* an app they already understand.
+
+## Understanding user expectations
+
+When someone installs an app for the first time, they expect guidance:
+
+- What does this app do?
+- How does it work?
+- How do I use it?
+
+That’s exactly what an intro or onboarding flow is for — and it’s valuable.
+
+But after that first experience, expectations change.
+
+Users want speed. They want direct access. They want to pick up right where they left off.
+
+## Where friction begins
+
+In our case, the intro consisted of three swipeable screens explaining how the app works.
+
+Helpful? Yes.
+
+But forcing users to swipe through them every time they reopened the app created unnecessary friction — especially for users who just wanted to jump back in and select a month or continue where they left off.
+
+## The simple fix that changes everything
+
+The solution is straightforward:
+
+- Show the intro **only once** (on first launch)
+- Remember that the user has already completed it
+- Take returning users directly to the main interface
+
+This small adjustment removes repeated effort and respects the user’s time.
+
+## What a better flow looks like
+
+With an improved onboarding experience:
+
+- First-time users get a clear, guided introduction
+- Returning users skip the intro automatically
+- The app opens instantly to the main content
+- Navigation feels faster and more natural
+
+## Why this matters more than you think
+
+User experience isn’t just about features — it’s about flow.
+
+Even small interruptions can make an app feel slower, more complicated, or less enjoyable than it actually is.
+
+By removing unnecessary steps, you create a product that feels intuitive and effortless.
+
+---
+
+We’re constantly improving the experience based on real feedback like this. If you want a smoother, more focused way to manage your content without friction, now is the perfect time to try the latest version of our app.`,
+  },
+    {
     slug: "2026-04-22-faster-app-sharing-settings-improvement",
     title: "Faster App Sharing and Improved Settings for a Better User Experience",
     description:
