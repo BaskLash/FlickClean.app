@@ -9,6 +9,82 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
     {
+    slug: "2026-04-25-first-5-star-review-growth-milestone",
+    title: "Our First 5-Star Review and a Huge Milestone in the App Store",
+    description:
+      "From launch to our first 5-star review and a top App Store ranking—here’s what this milestone means and why user support drives everything we build.",
+    date: "2026-04-25",
+    readingMinutes: 4,
+    content: `Every product journey has defining moments.
+
+For us, one of those moments just happened.
+
+## Our first 5-star review ⭐
+
+Two days ago, we received our very first 5-star review.
+
+It might sound like a small step from the outside, but for us, it means everything. It’s the first real signal that what we’re building is not just working — it’s resonating.
+
+Behind that single rating is a real person who took the time to try the app, trust it, and share positive feedback.
+
+That’s something we don’t take for granted.
+
+## Ranking #3 in the App Store
+
+At the same time, something even more surprising happened:
+
+In the Swiss App Store search for “Photo Swiper”, we’re currently ranked **#3**.
+
+For a growing app, this is a huge milestone.
+
+It shows that the app is gaining visibility, traction, and momentum — faster than we expected.
+
+## Why this matters
+
+Growth is exciting, but what matters more is *how* it happens.
+
+These early signals tell us:
+
+- Users are discovering the app
+- People are finding real value in it
+- The experience is strong enough to earn top ratings
+
+And most importantly:
+
+It motivates us to keep improving.
+
+## A genuine thank you
+
+We want to sincerely thank everyone who has supported us so far.
+
+Whether you:
+
+- Tested the app early
+- Shared it with others
+- Gave feedback
+- Or simply used it
+
+You’ve helped shape what this product is becoming.
+
+A special thank you goes to our network, which has proven to be one of the strongest sources of support during this early phase.
+
+## What comes next
+
+This is just the beginning.
+
+Our goal is not just to grow fast — but to grow *right*:
+
+- Continuously improving the experience
+- Listening closely to feedback
+- Refining every detail that matters
+
+We’re committed to building something that keeps getting better over time.
+
+---
+
+If you haven’t tried the app yet, now is the perfect moment to see what people are already loving. Give it a try and experience the difference for yourself.`,
+  },
+    {
     slug: "2026-04-25-clear-swipe-guidance-better-ux",
     title: "Clear Swipe Guidance: Making Interactions Instantly Understandable",
     description:
