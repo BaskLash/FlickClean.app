@@ -29,7 +29,14 @@ export function SiteHeader() {
       className="sticky top-0 z-50"
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link
+          href="/"
+          className="flex items-center gap-2 group"
+          data-track-id="nav_home_logo"
+          data-track-type="nav"
+          data-track-click="click_nav"
+          data-track-hover="true"
+        >
           <span className="flex size-8 items-center justify-center rounded-xl bg-white text-black">
             <Image 
     src="/icon512x512.jpg" 
@@ -47,10 +54,21 @@ export function SiteHeader() {
           <Link
             href="/#how-it-works"
             className="hover:text-white transition-colors"
+            data-track-id="nav_how_it_works"
+            data-track-type="nav"
+            data-track-click="click_nav"
+            data-track-hover="true"
           >
             How it works
           </Link>
-          <Link href="/blog" className="hover:text-white transition-colors">
+          <Link
+            href="/blog"
+            className="hover:text-white transition-colors"
+            data-track-id="nav_blog"
+            data-track-type="nav"
+            data-track-click="click_nav"
+            data-track-hover="true"
+          >
             Blog
           </Link>
           <a
@@ -64,6 +82,9 @@ export function SiteHeader() {
               })
             }
             aria-label="Get FlickClean on the App Store"
+            data-track-id="nav_app_store"
+            data-track-type="cta"
+            data-track-hover="true"
             className="inline-flex items-center gap-1.5 rounded-full bg-white text-black px-3.5 py-1.5 font-medium hover:bg-white/90 transition-colors"
           >
             <NavAppleLogo />

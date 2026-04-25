@@ -5,10 +5,16 @@ import {
   AppStoreBadge,
   StartCleaningButton,
 } from "@/components/CTAButtons";
+import { useSectionTracker } from "@/components/analytics/SectionTracker";
 
 export function CTA() {
+  const ref = useSectionTracker<HTMLElement>("section_cta");
   return (
-    <section id="download" className="relative py-24 sm:py-32">
+    <section
+      ref={ref}
+      id="download"
+      className="relative py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-4xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

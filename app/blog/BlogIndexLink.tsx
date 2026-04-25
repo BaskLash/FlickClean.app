@@ -15,8 +15,16 @@ export function BlogIndexLink({
   return (
     <Link
       href={`/blog/${slug}`}
+      data-track-id={`blog_index_${slug}`}
+      data-track-type="blog_card"
+      data-track-hover="true"
       onClick={() =>
-        trackEvent("blog_click", { source: "blog_index", slug })
+        trackEvent("blog_click", {
+          source: "blog_index",
+          slug,
+          element_id: `blog_index_${slug}`,
+          interaction_type: "click",
+        })
       }
       className={className}
     >

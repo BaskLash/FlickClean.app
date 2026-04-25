@@ -20,7 +20,14 @@ export default function SupportPage() {
           <h2 style={styles.heading}>Contact</h2>
           <p style={styles.text}>
             Email:{" "}
-            <a href="mailto:business.promptin@gmail.com" style={styles.link}>
+            <a
+              href="mailto:business.promptin@gmail.com"
+              style={styles.link}
+              data-track-id="support_email"
+              data-track-type="contact"
+              data-track-click="click_contact"
+              data-track-hover="true"
+            >
               business.promptin@gmail.com
             </a>
           </p>

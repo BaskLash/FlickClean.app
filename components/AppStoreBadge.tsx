@@ -46,10 +46,15 @@ export function AppStoreBadge({
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Download FlickClean on the App Store"
+      data-track-id={`app_store_badge_${location}`}
+      data-track-type="cta"
+      data-track-hover="true"
       onClick={() =>
         trackEvent("download_click", {
           location,
           destination: "app_store",
+          element_id: `app_store_badge_${location}`,
+          interaction_type: "click",
         })
       }
       className={`inline-flex items-center justify-center rounded-xl border border-white/15 bg-black text-white shadow-[0_10px_30px_-12px_rgba(0,0,0,0.7)] transition-colors hover:bg-[#0a0a0a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${sizing} ${className}`}

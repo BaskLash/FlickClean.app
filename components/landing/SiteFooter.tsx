@@ -19,15 +19,33 @@ export function SiteFooter() {
           <span className="text-sm font-medium">FlickClean</span>
         </div>
         <div className="flex items-center gap-5 text-sm text-white/50">
-          <Link href="/blog" className="hover:text-white transition-colors">
+          <Link
+            href="/blog"
+            className="hover:text-white transition-colors"
+            data-track-id="footer_blog"
+            data-track-type="footer_link"
+            data-track-click="click_footer_link"
+            data-track-hover="true"
+          >
             Blog
           </Link>
-          <Link href="/#how-it-works" className="hover:text-white transition-colors">
+          <Link
+            href="/#how-it-works"
+            className="hover:text-white transition-colors"
+            data-track-id="footer_how_it_works"
+            data-track-type="footer_link"
+            data-track-click="click_footer_link"
+            data-track-hover="true"
+          >
             How it works
           </Link>
           <a
             href="/sitemap.xml"
             className="hover:text-white transition-colors"
+            data-track-id="footer_sitemap"
+            data-track-type="footer_link"
+            data-track-click="click_footer_link"
+            data-track-hover="true"
           >
             Sitemap
           </a>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useSectionTracker } from "@/components/analytics/SectionTracker";
 
 const statements = [
   "Too many photos.",
@@ -10,8 +11,9 @@ const statements = [
 ];
 
 export function Impact() {
+  const ref = useSectionTracker<HTMLElement>("section_impact");
   return (
-    <section className="relative py-28 sm:py-40">
+    <section ref={ref} className="relative py-28 sm:py-40">
       <div className="mx-auto max-w-3xl px-6 text-center">
         <div className="space-y-6">
           {statements.map((text, i) => (

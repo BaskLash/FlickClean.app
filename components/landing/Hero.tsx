@@ -6,6 +6,7 @@ import {
   AppStoreBadge,
   StartCleaningButton,
 } from "@/components/CTAButtons";
+import { useSectionTracker } from "@/components/analytics/SectionTracker";
 
 const floatingTiles = [
   { top: "6%", left: "4%", size: 110, delay: 0, hue: "from-pink-400/40 to-fuchsia-500/30" },
@@ -16,8 +17,9 @@ const floatingTiles = [
 ];
 
 export function Hero() {
+  const ref = useSectionTracker<HTMLElement>("section_hero");
   return (
-    <section className="relative overflow-hidden bg-ambient">
+    <section ref={ref} className="relative overflow-hidden bg-ambient">
       {/* Floating blurred photo tiles */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-0">
         {floatingTiles.map((t, i) => (

@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useSectionTracker } from "@/components/analytics/SectionTracker";
 
 export function WhyFlickClean() {
+  const ref = useSectionTracker<HTMLElement>("section_why_flickclean");
   return (
-    <section className="relative py-24 sm:py-32">
+    <section ref={ref} className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-3xl px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}

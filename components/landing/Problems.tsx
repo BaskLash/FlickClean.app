@@ -8,6 +8,7 @@ import {
   ShieldAlert,
   type LucideIcon,
 } from "lucide-react";
+import { useSectionTracker } from "@/components/analytics/SectionTracker";
 
 type Problem = {
   icon: LucideIcon;
@@ -38,9 +39,14 @@ const problems: Problem[] = [
   },
 ];
 
+function slugify(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
+}
+
 export function Problems() {
+  const ref = useSectionTracker<HTMLElement>("section_problems");
   return (
-    <section className="relative py-20 sm:py-28">
+    <section ref={ref} className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-6">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
@@ -60,6 +66,9 @@ export function Problems() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
+              data-track-id={`problem_${slugify(p.title)}`}
+              data-track-type="problem_card"
+              data-track-hover="true"
               className="glass group relative overflow-hidden rounded-3xl p-7 sm:p-8 transition-colors hover:bg-white/[0.05]"
             >
               <div

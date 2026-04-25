@@ -8,6 +8,11 @@ import {
   ShieldCheck,
   BarChart3,
 } from "lucide-react";
+import { useSectionTracker } from "@/components/analytics/SectionTracker";
+
+function slugify(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
+}
 
 const bullets = [
   {
@@ -38,8 +43,9 @@ const bullets = [
 ];
 
 export function Solution() {
+  const ref = useSectionTracker<HTMLElement>("section_solution");
   return (
-    <section className="relative py-24 sm:py-32">
+    <section ref={ref} className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <motion.span
           initial={{ opacity: 0, y: 10 }}
@@ -80,6 +86,9 @@ export function Solution() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: i * 0.05 }}
+            data-track-id={`solution_${slugify(b.title)}`}
+            data-track-type="solution_card"
+            data-track-hover="true"
             className="glass rounded-3xl p-6 transition-colors hover:bg-white/[0.05]"
           >
             <div className="flex size-10 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-white/80">

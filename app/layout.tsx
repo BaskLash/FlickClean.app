@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { ScrollDepthTracker } from "@/components/analytics/ScrollDepthTracker";
+import { SessionAnalytics } from "@/components/analytics/SessionAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,6 +72,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#07080b] text-[#f5f7fb]">
         {children}
+        <SessionAnalytics />
         <ScrollDepthTracker />
         {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
         <Analytics />

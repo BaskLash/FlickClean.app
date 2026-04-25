@@ -4,11 +4,17 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import { useSectionTracker } from "@/components/analytics/SectionTracker";
 import type { BlogPost } from "@/app/blog/posts";
 
 export function BlogPreview({ posts }: { posts: BlogPost[] }) {
+  const ref = useSectionTracker<HTMLElement>("section_blog_preview");
   return (
-    <section id="blog" className="relative py-24 sm:py-32">
+    <section
+      ref={ref}
+      id="blog"
+      className="relative py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex items-end justify-between gap-6">
           <motion.div
@@ -28,8 +34,15 @@ export function BlogPreview({ posts }: { posts: BlogPost[] }) {
 
           <Link
             href="/blog"
+            data-track-id="blog_all_posts_link"
+            data-track-type="nav"
+            data-track-hover="true"
             onClick={() =>
-              trackEvent("blog_click", { source: "home_header" })
+              trackEvent("blog_click", {
+                source: "home_header",
+                element_id: "blog_all_posts_link",
+                interaction_type: "click",
+              })
             }
             className="hidden sm:inline-flex items-center gap-1.5 text-sm text-white/70 hover:text-white transition-colors"
           >
@@ -49,10 +62,15 @@ export function BlogPreview({ posts }: { posts: BlogPost[] }) {
             >
               <Link
                 href={`/blog/${post.slug}`}
+                data-track-id={`blog_card_${post.slug}`}
+                data-track-type="blog_card"
+                data-track-hover="true"
                 onClick={() =>
                   trackEvent("blog_click", {
                     source: "home_card",
                     slug: post.slug,
+                    element_id: `blog_card_${post.slug}`,
+                    interaction_type: "click",
                   })
                 }
                 className="group block h-full rounded-3xl border border-white/10 bg-white/[0.02] p-6 transition-colors hover:bg-white/[0.05]"

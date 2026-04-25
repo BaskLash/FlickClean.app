@@ -2,6 +2,11 @@
 
 import { motion } from "framer-motion";
 import { EyeOff, Clock, ShieldCheck } from "lucide-react";
+import { useSectionTracker } from "@/components/analytics/SectionTracker";
+
+function slugify(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
+}
 
 const items = [
   {
@@ -22,8 +27,9 @@ const items = [
 ];
 
 export function Trust() {
+  const ref = useSectionTracker<HTMLElement>("section_trust");
   return (
-    <section className="relative py-24 sm:py-32">
+    <section ref={ref} className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-5xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <motion.span
@@ -66,6 +72,9 @@ export function Trust() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
+              data-track-id={`trust_${slugify(it.title)}`}
+              data-track-type="trust_card"
+              data-track-hover="true"
               className="glass rounded-3xl p-6"
             >
               <div className="flex size-11 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-white/80">

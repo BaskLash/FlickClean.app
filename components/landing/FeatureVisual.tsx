@@ -9,6 +9,7 @@ import {
   Calendar,
   HardDrive,
 } from "lucide-react";
+import { useSectionTracker } from "@/components/analytics/SectionTracker";
 
 const demoCards = [
   { hue: "from-rose-400/70 to-fuchsia-500/40", label: "IMG_2024" },
@@ -227,8 +228,13 @@ function MonthlyView() {
 }
 
 export function FeatureVisual() {
+  const ref = useSectionTracker<HTMLElement>("section_feature_visual");
   return (
-    <section id="how-it-works" className="relative py-24 sm:py-32">
+    <section
+      ref={ref}
+      id="how-it-works"
+      className="relative py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-6xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -247,13 +253,30 @@ export function FeatureVisual() {
         </motion.div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-10">
-          <div className="flex items-center justify-center rounded-3xl glass p-8 sm:p-12">
+          <div
+            className="flex items-center justify-center rounded-3xl glass p-8 sm:p-12"
+            data-track-id="feature_swipe_demo"
+            data-track-type="feature_visual"
+            data-track-hover="true"
+          >
             <SwipeDemo />
           </div>
 
           <div className="flex flex-col gap-4">
-            <StorageBar />
-            <MonthlyView />
+            <div
+              data-track-id="feature_storage_bar"
+              data-track-type="feature_visual"
+              data-track-hover="true"
+            >
+              <StorageBar />
+            </div>
+            <div
+              data-track-id="feature_monthly_view"
+              data-track-type="feature_visual"
+              data-track-hover="true"
+            >
+              <MonthlyView />
+            </div>
           </div>
         </div>
       </div>
