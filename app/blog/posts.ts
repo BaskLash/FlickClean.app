@@ -9,6 +9,198 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
     {
+    slug: "2026-05-03-paywall-issue-revenuecat-appstore-fix",
+    title: "Why Our Paywall Didn’t Work (And the Hidden App Store Step That Fixed It)",
+    description:
+      "Our paywall setup with RevenueCat looked perfect—until it didn’t work. Here’s the overlooked App Store requirement that blocked everything and how we fixed it.",
+    date: "2026-05-03",
+    readingMinutes: 6,
+    content: `Sometimes, the hardest bugs aren’t caused by code.
+
+They’re caused by **missing steps you didn’t even know existed**.
+
+## The situation: everything looked correct
+
+We had fully integrated our payment system:
+
+- RevenueCat was set up  
+- Products and entitlements were configured  
+- Paywalls were implemented inside the app  
+
+Everything had been checked—multiple times.
+
+And yet, something wasn’t working.
+
+## The problem we couldn’t explain
+
+After users swiped through a certain number of photos, the paywall was supposed to appear.
+
+Instead, we saw an error message.
+
+A red warning appeared—suggesting that no products or categories had been configured in RevenueCat.
+
+But that wasn’t true.
+
+Everything was already there.
+
+We double-checked it again… and again.
+
+Still no success.
+
+## The real issue: outside the app
+
+After extensive research, we finally discovered the root cause.
+
+The problem wasn’t in our app.
+It wasn’t in RevenueCat.
+
+It was in **App Store Connect**.
+
+More specifically, in the **business setup** section.
+
+## The missing piece
+
+To enable payments properly, Apple requires additional steps:
+
+- Adding and verifying bank account details  
+- Completing tax information  
+- Submitting required agreements  
+
+Until these steps are completed and approved, **payments simply won’t work**.
+
+Even if everything else is configured perfectly.
+
+This also means that services like RevenueCat cannot process transactions correctly—because the foundation isn’t fully activated.
+
+## Why this is easy to overlook
+
+The tricky part?
+
+There’s no obvious, direct error pointing to this.
+
+Instead, you see misleading messages—like missing product configurations—even though the real issue lies elsewhere.
+
+This can easily lead to hours (or days) of unnecessary debugging.
+
+## The reality of verification delays
+
+Another important lesson:
+
+These verification processes take time.
+
+We started the setup on May 1st—and by May 3rd, it was still not fully completed.
+
+Part of this delay may be due to timing (weekends can slow things down), but in general:
+
+**App Store financial verification is not instant.**
+
+It requires patience.
+
+## What we learned
+
+This experience reinforced a few key lessons:
+
+- Not all issues are technical  
+- External systems can block internal functionality  
+- Payment flows depend on full platform compliance  
+- Verification steps are critical—not optional  
+
+## Moving forward
+
+Now that we’ve identified the issue, everything is in motion.
+
+Once the verification is complete, the paywall will function exactly as intended—and we can finally move forward with the next phase of growth.
+
+---
+
+If you’re exploring our app, you’re catching it at an exciting moment. Try it now and experience how everything comes together—smooth, fast, and built to continuously improve.`,
+  },
+    {
+    slug: "2026-05-01-introducing-paywalls-and-next-growth-phase",
+    title: "Introducing Paywalls: Entering the Next Phase of Our App Growth",
+    description:
+      "We’ve launched our first paywalls and are stepping into a new phase. Here’s what this means for users, growth, and the future of our product.",
+    date: "2026-05-01",
+    readingMinutes: 5,
+    content: `Every product reaches a point where growth meets sustainability.
+
+For us, that moment has arrived.
+
+We’ve officially introduced our first paywalls—and we’re excited to see what happens next.
+
+## Why we introduced paywalls
+
+Until now, our focus has been clear:
+
+Build a product that truly stands out.
+
+We invested heavily in:
+
+- A smooth and intuitive onboarding experience  
+- A modern and scalable architecture  
+- A clean, easy-to-understand user flow  
+
+The goal was simple: create something that feels better from the very first interaction.
+
+Now, with a strong foundation in place, it’s time to take the next step.
+
+## What we expect from this change
+
+Introducing paywalls always brings uncertainty.
+
+But it also unlocks new opportunities:
+
+- Validating the real value of the product  
+- Understanding what users are willing to invest in  
+- Creating a sustainable path for continuous improvement  
+
+We’re especially curious to see how users respond—and what we can learn from it.
+
+## Confidence in our product
+
+We don’t take this step blindly.
+
+We genuinely believe that our tool delivers a better experience than many alternatives on the market.
+
+Not just in terms of features—but in how everything works together:
+
+- A clearer flow  
+- Faster interactions  
+- Less friction in everyday use  
+
+This is where we see our biggest advantage.
+
+## Competing through experience, not just features
+
+Many apps compete by adding more and more features.
+
+We take a different approach.
+
+We focus on:
+
+- Simplicity  
+- Clarity  
+- Usability  
+
+Because at the end of the day, users don’t choose the app with the most features—they choose the one that feels best to use.
+
+## What this means going forward
+
+This is just the beginning of a new phase.
+
+With paywalls in place, we can:
+
+- Accelerate development  
+- Invest more into design and performance  
+- Deliver even more value over time  
+
+And most importantly, we can continue refining the experience based on real user behavior.
+
+---
+
+If you haven’t explored the app yet, now is the perfect time to see what makes it different. Try it yourself and experience a faster, clearer, and more modern way to manage your content.`,
+  },
+    {
     slug: "2026-04-28-app-store-screenshots-growth-strategy",
     title: "Why App Store Screenshots Can Make or Break Your App Growth",
     description:
