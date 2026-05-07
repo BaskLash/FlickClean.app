@@ -42,6 +42,33 @@ export default function SupportPage() {
           </p>
         </section>
 
+        <section style={styles.section}>
+          <h2 style={styles.heading}>Legal</h2>
+          <p style={styles.text}>
+            <a
+              href="/privacy"
+              style={styles.link}
+              data-track-id="support_privacy"
+              data-track-type="legal_link"
+              data-track-click="click_legal_link"
+              data-track-hover="true"
+            >
+              Privacy Policy
+            </a>
+            {" · "}
+            <a
+              href="/terms"
+              style={styles.link}
+              data-track-id="support_terms"
+              data-track-type="legal_link"
+              data-track-click="click_legal_link"
+              data-track-hover="true"
+            >
+              Terms of Service
+            </a>
+          </p>
+        </section>
+
         <footer style={styles.footer}>
           <p>© {new Date().getFullYear()} FlickClean</p>
         </footer>

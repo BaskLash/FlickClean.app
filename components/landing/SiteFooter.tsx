@@ -18,7 +18,7 @@ export function SiteFooter() {
           </span>
           <span className="text-sm font-medium">FlickClean</span>
         </div>
-        <div className="flex items-center gap-5 text-sm text-white/50">
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-white/50">
           <Link
             href="/blog"
             className="hover:text-white transition-colors"
@@ -38,6 +38,26 @@ export function SiteFooter() {
             data-track-hover="true"
           >
             How it works
+          </Link>
+          <Link
+            href="/privacy"
+            className="hover:text-white transition-colors"
+            data-track-id="footer_privacy"
+            data-track-type="footer_link"
+            data-track-click="click_footer_link"
+            data-track-hover="true"
+          >
+            Privacy
+          </Link>
+          <Link
+            href="/terms"
+            className="hover:text-white transition-colors"
+            data-track-id="footer_terms"
+            data-track-type="footer_link"
+            data-track-click="click_footer_link"
+            data-track-hover="true"
+          >
+            Terms
           </Link>
           <a
             href="/sitemap.xml"
