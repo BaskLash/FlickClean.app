@@ -40,6 +40,16 @@ export function SiteFooter() {
             How it works
           </Link>
           <Link
+            href="/contact"
+            className="hover:text-white transition-colors"
+            data-track-id="footer_contact"
+            data-track-type="footer_link"
+            data-track-click="click_footer_link"
+            data-track-hover="true"
+          >
+            Contact
+          </Link>
+          <Link
             href="/privacy"
             className="hover:text-white transition-colors"
             data-track-id="footer_privacy"

@@ -71,6 +71,16 @@ export function SiteHeader() {
           >
             Blog
           </Link>
+          <Link
+            href="/contact"
+            className="hover:text-white transition-colors"
+            data-track-id="nav_contact"
+            data-track-type="nav"
+            data-track-click="click_nav"
+            data-track-hover="true"
+          >
+            Contact
+          </Link>
           <a
             href={APP_STORE_URL}
             target="_blank"
