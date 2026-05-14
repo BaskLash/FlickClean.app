@@ -35,6 +35,9 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.date,
     },
+    robots: post.seoIndex
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
   };
 }
 

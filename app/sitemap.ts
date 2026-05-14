@@ -34,12 +34,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const postEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${SITE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+  // Only include posts explicitly marked as SEO-indexable.
+  // Founder stories and update notes stay on the site but are
+  // excluded from the sitemap and rendered with noindex.
+  const postEntries: MetadataRoute.Sitemap = blogPosts
+    .filter((post) => post.seoIndex === true)
+    .map((post) => ({
+      url: `${SITE_URL}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    }));
 
   return [...staticEntries, ...postEntries];
 }

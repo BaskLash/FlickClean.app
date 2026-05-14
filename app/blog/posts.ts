@@ -5,11 +5,13 @@ export type BlogPost = {
   date: string; // YYYY-MM-DD
   readingMinutes: number;
   content: string;
+  seoIndex: boolean;
 };
 
 export const blogPosts: BlogPost[] = [
     {
     slug: "2026-05-18-app-store-approval-delays-and-user-trust",
+    seoIndex: false,
     title: "How App Store Approval Delays Can Impact Early Momentum",
     description:
       "Strong reviews and growing momentum are exciting—but long approval phases can still slow progress. Here’s what we learned about patience, timing, and protecting early growth.",
@@ -102,6 +104,7 @@ We’re incredibly grateful for the support and positive feedback we’ve receiv
   },
     {
     slug: "2026-05-14-modern-user-experience-vs-competition",
+    seoIndex: false,
     title: "Why Modern User Experience Matters More Than Ever",
     description:
       "A fast, intuitive experience can outperform even established competitors. Here’s what our latest market analysis revealed—and why execution still matters most.",
@@ -207,6 +210,7 @@ If you want to experience a faster, cleaner, and more modern approach to organiz
   },
     {
     slug: "2026-05-12-modern-photo-cleaner-app-flickclean",
+    seoIndex: true,
     title: "Most Photo Cleaner Apps Are Stuck in the Past. FlickClean Isn’t.",
     description:
       "Traditional photo cleaner apps feel slow, outdated, and frustrating. FlickClean was built differently — faster, simpler, and designed for modern iPhone users.",
@@ -388,6 +392,7 @@ If you’re tired of slow, outdated photo cleaner apps that never truly solve th
   },
   {
     slug: "2026-05-11-app-store-connect-approval-growth-momentum",
+    seoIndex: false,
     title: "App Store Approval Momentum: Preparing for the Next Stage of Growth",
     description:
       "Our latest App Store Connect indicators show strong momentum toward release approval. Here’s why this phase matters and what comes next for our app growth strategy.",
@@ -472,6 +477,7 @@ We’re incredibly excited about what’s ahead. If you want to experience an ap
   },
     {
     slug: "2026-05-06-app-store-connect-support-and-paywall-progress",
+    seoIndex: false,
     title: "How App Store Connect Support Helped Us Move Faster Than Expected",
     description:
       "Building a paywall system can be challenging, but strong platform support changes everything. Here’s how the App Store Connect team helped us move forward with confidence.",
@@ -561,6 +567,7 @@ We’re excited about the direction things are heading and can’t wait to conti
   },
     {
     slug: "2026-05-03-paywall-issue-revenuecat-appstore-fix",
+    seoIndex: false,
     title: "Why Our Paywall Didn’t Work (And the Hidden App Store Step That Fixed It)",
     description:
       "Our paywall setup with RevenueCat looked perfect—until it didn’t work. Here’s the overlooked App Store requirement that blocked everything and how we fixed it.",
@@ -668,6 +675,7 @@ If you’re exploring our app, you’re catching it at an exciting moment. Try i
   },
     {
     slug: "2026-05-01-introducing-paywalls-and-next-growth-phase",
+    seoIndex: false,
     title: "Introducing Paywalls: Entering the Next Phase of Our App Growth",
     description:
       "We’ve launched our first paywalls and are stepping into a new phase. Here’s what this means for users, growth, and the future of our product.",
@@ -753,6 +761,7 @@ If you haven’t explored the app yet, now is the perfect time to see what makes
   },
     {
     slug: "2026-04-28-app-store-screenshots-growth-strategy",
+    seoIndex: false,
     title: "Why App Store Screenshots Can Make or Break Your App Growth",
     description:
       "Your App Store screenshots are your first impression—and your biggest growth lever. Here’s why optimizing them is critical for downloads, reviews, and long-term success.",
@@ -872,6 +881,7 @@ We’re working intensely on refining every detail—from the App Store presence
   },
     {
     slug: "2026-04-25-clear-swipe-guidance-better-ux",
+    seoIndex: false,
     title: "Clear Swipe Guidance: Making Interactions Instantly Understandable",
     description:
       "Even simple gestures can feel confusing without guidance. Learn how subtle swipe indicators can improve clarity, usability, and overall user experience.",
@@ -965,6 +975,7 @@ We’re continuously refining every detail to make the app as intuitive and effo
   },
     {
     slug: "2026-04-24-video-preview-better-selection-experience",
+    seoIndex: false,
     title: "Why Video Previews Make Choosing the Right Moments So Much Easier",
     description:
       "Static thumbnails aren’t enough. Discover how video previews improve decision-making and create a smoother, more intuitive gallery experience.",
@@ -1041,6 +1052,7 @@ We’re continuously refining the experience to make organizing your gallery fas
   },
     {
     slug: "2026-04-23-skip-intro-better-user-experience",
+    seoIndex: false,
     title: "Why Skipping the Intro Screen Improves the Entire App Experience",
     description:
       "First impressions matter—but forcing users to repeat them doesn’t. Learn how removing friction after onboarding creates a smoother, more enjoyable app experience.",
@@ -1115,6 +1127,7 @@ We’re constantly improving the experience based on real feedback like this. If
   },
     {
     slug: "2026-04-22-faster-app-sharing-settings-improvement",
+    seoIndex: false,
     title: "Faster App Sharing and Improved Settings for a Better User Experience",
     description:
       "We continuously improve our app by analyzing competitors and user behavior. Discover how our latest update makes sharing and settings easier than ever.",
@@ -1165,6 +1178,7 @@ We’ll continue refining and improving our app based on real-world usage and fe
   },
   {
     slug: "2026-04-21-adding-pinch-to-zoom-flutter-photo-swipe-view",
+    seoIndex: false,
     title: "How We Added Natural Pinch-to-Zoom to Our Photo Swipe Interface",
     description: "When even non-technical users instinctively tried to pinch-zoom on photos, we knew it was time to add proper gesture-based zoom. Here's how we made it feel perfectly native.",
     date: "2026-04-21",
@@ -1241,6 +1255,7 @@ Try Photo Swiper today and enjoy a photo review experience that finally feels co
   },
   {
     slug: "2026-04-20-fixing-image-cropping-in-flutter-swipe-review",
+    seoIndex: false,
     title: "How We Fixed Image Cropping in Our Full-Screen Photo Swipe Review",
     description: "When photos appeared cropped and cut off during swiping, the experience felt wrong. Here's how we made every image look exactly as it was originally taken — naturally and completely visible.",
     date: "2026-04-20",
@@ -1319,6 +1334,7 @@ Try Photo Swiper today and enjoy a swipe experience that finally feels right.`,
   },
   {
     slug: "2026-04-17-adding-left-handed-swipe-support-flutter-photo-app",
+    seoIndex: false,
     title: "How We Added Left-Handed Swipe Support to Our Photo App",
     description: "One left-handed user showed us why fixed swipe directions create unnecessary friction. Here's how we made swipe controls fully customizable — simply and intuitively.",
     date: "2026-04-17",
@@ -1408,6 +1424,7 @@ Try Photo Swiper now — with fully customizable swipe directions that adapt to 
   },
     {
     slug: "2026-04-16-fixing-ios-photo-permission-onboarding-ux",
+    seoIndex: false,
     title: "How We Fixed a Critical iOS Photo Permission Onboarding UX Flaw",
     description: "The subtle permission flow mistake that was quietly killing our activation rates — and the simple fix that dramatically improved user experience.",
     date: "2026-04-16",
@@ -1546,6 +1563,7 @@ Ready to experience a frustration-free way to clean and organize your photo libr
   },
   {
     slug: "clean-phone-gallery-without-losing-important-photos",
+    seoIndex: false,
     title: "How to Clean Your Phone Gallery Without Losing Important Photos",
     description:
       "A simple, stress-free method to declutter your gallery without ever worrying about deleting the wrong memory.",
@@ -1584,6 +1602,7 @@ Cleaning your gallery shouldn't feel like a risk. With the right flow — quick 
   },
   {
     slug: "why-your-storage-is-always-full",
+    seoIndex: false,
     title: "Why Your Storage Is Always Full (And How to Fix It)",
     description:
       "The real reason your phone runs out of space — and the fastest way to reclaim gigabytes without giving anything up.",
@@ -1621,6 +1640,7 @@ Storage anxiety isn't about the phone. It's about *friction*. Remove the frictio
   },
   {
     slug: "fastest-way-to-organize-thousands-of-photos",
+    seoIndex: false,
     title: "The Fastest Way to Organize Thousands of Photos",
     description:
       "Stop scrolling. Start sorting. A calm workflow for taming a gallery that grew out of control.",
